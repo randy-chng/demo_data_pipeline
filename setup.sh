@@ -1,6 +1,6 @@
 #!/bin/bash
 
-readonly PROJ=demo_web_api_data_pipeline
+readonly PROJ=demo_data_pipeline
 
 sudo timedatectl set-timezone Asia/Singapore
 
