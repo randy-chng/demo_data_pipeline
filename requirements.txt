@@ -2,5 +2,5 @@ flask
 mysql-connector-python
 waitress
 paste
-yaml
+pyyaml
 pandas
