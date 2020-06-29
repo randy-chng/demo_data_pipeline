@@ -3,11 +3,18 @@ This is a short project to demonstrate
 - an API service to query ingested data
 
 Batch data pipeline details (db_setup_refresh.py)
-- Download compressed MySQL dumps from https://dumps.wikimedia.org/simplewiki/latest/
+- Download compressed MySQL dumps
+    - Dump, https://dumps.wikimedia.org/simplewiki/latest/
+    - Metadata, https://meta.wikimedia.org/wiki/Data_dumps/What%27s_available_for_download#Database_tables
 - Uncompress downloaded MySQL dumps
 - Create schema (simplewiki) in MySQL
 - Load uncompressed MySQL dumps into simplewiki
 - Preprocesses data and store results to support 2nd API endpoint
+
+API service details (api.py)
+- Exposes 2 endpoints
+- 1st endpoint takes in a SQL select query, executes query on simplewiki and returns the result
+- 2nd endpoint takes in a top 10 category name and returns the most outdated page associated to the category
 
 Resulting tables in simplewiki
 - From MySQL dumps
@@ -18,11 +25,6 @@ Resulting tables in simplewiki
 - From preprocessing data
     - outdated_pages_in_top_category (intermediate results)
     - most_outdated_page_in_top_category (final results)
-
-API service (api.py)
-- Exposes 2 endpoints
-- 1st endpoint takes in a SQL select query, executes query on simplewiki and returns the result
-- 2nd endpoint takes in a top 10 category name and returns the most outdated page associated to the category
 
 
 ## GCP Database Set Up
