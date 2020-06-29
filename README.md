@@ -117,18 +117,18 @@ cd ~/demo_data_pipeline && nohup python3 api.py &
 
 To interact with api, browsers (Chrome, etc.) or python or curl can be used
 
-** Replace 34.87.87.72 with appropriate address
+** Replace 127.0.0.1 with appropriate address
 
 For browser, visit either links
-- http://34.87.87.72:5000/api/v1/resources/outdated?category=American_people_stubs
-- http://34.87.87.72:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
+- http://127.0.0.1:5000/api/v1/resources/outdated?category=American_people_stubs
+- http://127.0.0.1:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
 
 For python, refer to example_call_api.ipynb
 
 For curl
 ```
-curl http://34.87.87.72:5000/api/v1/resources/outdated?category=American_people_stubs
-curl http://34.87.87.72:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
+curl http://127.0.0.1:5000/api/v1/resources/outdated?category=American_people_stubs
+curl http://127.0.0.1:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
 ```
 
 ## Scheduling Data Pipeline Service (Optional)
