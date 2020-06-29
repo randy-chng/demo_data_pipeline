@@ -11,7 +11,7 @@ This project demonstrates
 - Uncompress downloaded MySQL dumps
 - Create schema (simplewiki) in MySQL
 - Load uncompressed MySQL dumps into simplewiki
-- Preprocesses data and store results to support 2nd API endpoint
+- Preprocess data and store results to support 2nd API endpoint
 
 #### API service details (api.py)
 - Exposes 2 endpoints
@@ -28,14 +28,14 @@ This project demonstrates
     - outdated_pages_in_top_category (intermediate results)
     - most_outdated_page_in_top_category (final results)
 
-## Set Up / Installation
+## Installation
 
 ### Database
 Spin up Cloud SQL instance (MySQL 5.7)
 
 ** Note Cloud SQL instance ip address, user and password for application set up
 
-### Application - Docker
+### Application (Docker)
 
 #### Step 1
 Spin up GCE instance (Container Optimized OS)
@@ -78,7 +78,7 @@ Run following commands to run api service
 nohup python3 api.py &
 ```
 
-### Application - Non-Docker
+### Application (Non-Docker)
 
 #### Step 1
 Spin up GCE instance (Ubuntu 18.04)
