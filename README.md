@@ -68,12 +68,12 @@ docker exec -it [container id] /bin/bash
 ```
 
 #### Step 6
-Run following commands to run data pipeline service
+Run following commands to activate data pipeline service
 ```
 python3 db_setup_refresh.py
 ```
 
-Run following commands to run api service
+Run following commands to activate api service
 ```
 nohup python3 api.py &
 ```
@@ -113,9 +113,9 @@ source ~/venv/bin/activate
 cd ~/demo_data_pipeline && nohup python3 api.py &
 ```
 
-## Interact with API
+## API Interaction
 
-To interact with api, browsers like Chrome or python or curl can be used
+To interact with api, browsers (Chrome, etc.) or python or curl can be used
 
 ** Replace 34.87.87.72 with appropriate address
 
@@ -132,7 +132,7 @@ curl http://34.87.87.72:5000/api/v1/resources/query?sql=select%20*%20from%20cate
 ```
 
 ## Scheduling Data Pipeline Service (Optional)
-For a monthly refresh of simplewiki data, configure cron by running the following commands.
+For a monthly refresh of simplewiki data, configure cron by running following commands.
 Schedule will be every 1st day of the month at 12am.
 ```
 chmod +x ~/demo_data_pipeline/refresh_data.sh
