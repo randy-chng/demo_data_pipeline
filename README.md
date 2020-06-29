@@ -49,7 +49,7 @@ nohup python3 api.py &
 # GCP Application Set Up - Non-Docker
 
 ## Step 1
-Spin up GCE instance (Ubuntu 18.04).
+Spin up GCE instance (Ubuntu 18.04)
 
 ** Take note of GCE instance ip address and add into Cloud SQL instance's Authorized networks
 
@@ -83,7 +83,7 @@ cd ~/demo_data_pipeline && nohup python3 api.py &
 
 # Interact with API
 
-To interact with api, browsers like Chrome or curl or python can be used.
+To interact with api, browsers like Chrome or python or curl can be used
 
 ** Replace 34.87.87.72 with appropriate address
 
@@ -91,13 +91,13 @@ For browser, visit either links
 - http://34.87.87.72:5000/api/v1/resources/outdated?category=American_people_stubs
 - http://34.87.87.72:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
 
+For python, refer to example_call_api.ipynb
+
 For curl
 ```
 curl http://34.87.87.72:5000/api/v1/resources/outdated?category=American_people_stubs
 curl http://34.87.87.72:5000/api/v1/resources/query?sql=select%20*%20from%20category%20limit%203
 ```
-
-For python, refer to example_call_api.py
 
 # Scheduling Data Pipeline Service (Optional)
 For a monthly refresh of simplewiki data, configure cron by running the following commands.
